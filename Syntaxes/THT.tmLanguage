@@ -18,7 +18,7 @@
 				(\$[a-zA-Z][a-zA-Z0-9]*) # var assignment (optional)
 				\s*(=)\s*
 			)?
-			\b(function|F|template|T)    # keyword
+			\b(function|fn|template|tm)    # keyword
 			(?:\s*
 				(?&lt;=[\s\*])
 				([a-zA-Z][a-zA-Z0-9]*)   # function name
@@ -109,7 +109,7 @@
 				(\$[a-zA-Z][a-zA-Z0-9]*)
 				\s*(=)\s*
 			)?
-			\b(function|F|template|T)
+			\b(function|fn|template|tm)
 			(?:\s*
 				(?&lt;=[\s\*])
 				([a-zA-Z][a-zA-Z0-9]*)
@@ -177,7 +177,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\w)[a-zA-Z][a-zA-Z0-9]*?=\s*:\s*(function|F|template|T)\b</string>
+			<string>(?&lt;!\w)[a-zA-Z][a-zA-Z0-9]*?=\s*:\s*(function|fn|template|tm)\b</string>
 			<key>name</key>
 			<string>entity.name.function.tht</string>
 		</dict>
@@ -219,7 +219,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.)\b(as|new|keep|sql|html|jcon|text|cmd|r)\b(?!\$)</string>
+			<string>(?&lt;!\.)\b(as|new|keep|sql|html|jcon|text|cmd|lm|r)\b(?!\$)</string>
 			<key>name</key>
 			<string>keyword.operator.tht</string>
 		</dict>
@@ -602,13 +602,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^(\s*)\-+\s+</string>
+					<string>^(\s*)\-\s+</string>
 					<key>name</key>
 					<string>markup.list.unnumbered.tht</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>^(\s*)\++\s+</string>
+					<string>^(\s*)\+\s+</string>
 					<key>name</key>
 					<string>markup.list.numbered.tht</string>
 				</dict>
@@ -655,6 +655,12 @@
 			<array>
 				<dict>
 					<key>match</key>
+					<string>^\s*\-\-\-\s+</string>
+					<key>name</key>
+					<string>keyword.operator.tht</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>%=|\+=|\-=|\*=|\|\|=|&amp;&amp;=|\#=|~=|(?&lt;!\()/=</string>
 					<key>name</key>
 					<string>keyword.operator.assignment.compound.tht</string>
@@ -691,15 +697,9 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\:|~|--</string>
+					<string>\:|~</string>
 					<key>name</key>
 					<string>keyword.operator.tht</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>!</string>
-					<key>name</key>
-					<string>keyword.operator.logical.tht</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -739,7 +739,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(url|html|sql|cmd|css|js)'''</string>
+					<string>(url|html|sql|cmd|css|js|lm)'''</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
@@ -770,7 +770,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(url|html|sql|cmd|css|js)'</string>
+					<string>(url|html|sql|cmd|css|js|lm)'</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>

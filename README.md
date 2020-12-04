@@ -10,9 +10,9 @@ TextMate bundle for the THT programming language.
 
 ## Sublime Text (Mac)
 
-- Go to `/Users/USER_NAME/Library/Application Support/Sublime Text 3/Packages`
+- Go to `~/Library/Application Support/Sublime Text 3/Packages`
 - Create a `THT` directory
-- Copy the contents of tht.tmbundle (Show Package Contents) 
+- Copy the contents of tht.tmbundle (Show Package Contents)
 
 Your directory will look something like this:
 
@@ -23,8 +23,8 @@ Your directory will look something like this:
 +--+ Packages
     |
     +--+ THT
-       | 
-       +-- Preferences 
+       |
+       +-- Preferences
        +-- Syntax
        +-- info.plist
 
