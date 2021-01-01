@@ -8,9 +8,9 @@ TextMate bundle for the THT programming language.
 
 - Download the .tmbundle file and double-click.  TextMate should install it for you.
 
-## Sublime Text (Mac)
+## Sublime Text
 
-- Go to `~/Library/Application Support/Sublime Text 3/Packages`
+- Go to `Preferences > Browse Packages...`
 - Create a `THT` directory
 - Copy the contents of tht.tmbundle (Show Package Contents)
 
