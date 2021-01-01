@@ -6,13 +6,13 @@ TextMate bundle for the THT programming language.
 
 ## TextMate
 
-- Download the .tmbundle file and double-click.  TextMate should install it for you.
+- Open the preferences and go the bundles tab. After installation it will be automatically updated for you.
 
 ## Sublime Text
 
 - Go to `Preferences > Browse Packages...`
 - Create a `THT` directory
-- Copy the contents of tht.tmbundle (Show Package Contents)
+- Copy the directories over
 
 Your directory will look something like this:
 
